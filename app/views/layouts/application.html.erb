@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LoginP</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div id="topMenueContainer">
+    <ul class="topMenue">
+   		<li>About</li>
+   		<li>Team</li>
+   		<li>Contact</li>
+   		<li><%= link_to 'Users', users_path %></li>
+   		<li class="login">
+   			<% if current_user %>
+				<!--when user is logged in-->
+ 				<%= link_to "Log Out", logout_path %>
+ 				<p>Logged in as <%= current_user.email %></p>
+ 			<% else %>
+ 				<!-- no user is logged in -->
+ 				<%= link_to "Sign Up", signup_path %> or
+ 				<%= link_to "Log In", login_path %>
+ 			<% end %>
+ 			<!-- flash warning for user (logged in|logged out) 
+ 			<% flash.each do |key, value| %>
+ 				<%= content_tag(:div, class: "alert alert-#{key}") do %>
+				<p><%= value %></p>
+ 				<% end %>
+			<% end %>-->
+ 		</li>
+   	</ul>
+   	<br><br><br>
+    </div>
+    
+    <br>
+    
+    <div id="sideMenueContainer">
+    <nav class="sideMenue">
+   		<li>About</li>
+   		<li>Team</li>
+   		<li>Contact</li>
+   	</nav>
+   	<br><br><br>
+    </div>
+    <!-- vertical menue try
+    <div class="shadowblockmenu-v">
+	<ul>
+	<li><a href="http://www.dynamicdrive.com/">Dynamic Drive</a></li>
+	<li><a href="http://www.dynamicdrive.com/style/">CSS Library</a></li>
+	<li><a href="http://www.cssdrive.com/">CSS Drive</a></li>
+	<li><a href="http://tools.dynamicdrive.com/imageoptimizer/">Gif Optimizer</a></li>
+	<li><a href="http://tools.dynamicdrive.com/favicon/">Favicon Creator</a></li>
+	<li><a href="http://tools.dynamicdrive.com/button/">Button Maker</a></li>
+	</ul>
+	</div>
+    -->
+    
+    
+	<!--<div id="user_header">
+ 		<% if current_user %>
+			Logged in as <%= current_user.email %>.
+ 			<%= link_to "Log Out", logout_path %>
+ 		<% else %>
+ 			<%= link_to "Sign Up", signup_path %> or
+ 			<%= link_to "Log In", login_path %>
+ 		<% end %>
+	</div>
+	
+	<% flash.each do |key, value| %>
+ 		<%= content_tag(:div, class: "alert alert-#{key}") do %>
+			<p><%= value %></p>
+ 		<% end %>
+	<% end %>-->
+	<div id="yieldbackground">
+		<div id="yieldcenter">
+			<br><br><br>
+			<%= yield %>
+			<br><br><br>
+		</div>
+	</div>
+	
+  </body>
+</html>
