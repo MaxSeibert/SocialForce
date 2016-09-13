@@ -1,0 +1,20 @@
+.labelleft{
+	width: 30%;
+    float: left;
+    text-align: left;
+	height: 40px;
+	font-size: 35px;
+	line-height: 40px;
+	color: black;
+}
+
+.userlabelleft{
+	width: 30%;
+    float: left;
+    text-align: left;
+	height: 40px;
+	font-size: 25px;
+	line-height: 40px;
+	color: red;
+	
+}

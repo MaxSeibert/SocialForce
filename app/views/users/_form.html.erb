@@ -10,33 +10,43 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<br>
+  <div class="userlabelleft">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+  </div>
+  <div class="textfieldright">
+    <%= f.text_field :first_name, :class => "textfield" %>
   </div>
 
-  <div class="field">
+  <div class="userlabelleft">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+  </div>
+  <div class="textfieldright">
+    <%= f.text_field :last_name, :class => "textfield" %>
   </div>
 
-  <div class="field">
+  <div class="userlabelleft"
     <%= f.label :email %>
-    <%= f.text_field :email %>
+  </div>
+  <div class="textfieldright">
+    <%= f.text_field :email, :class => "textfield" %>
   </div>
 
-  <div class="field">
+  <div class="userlabelleft">
     <%= f.label :password %>
-    <%= f.password_field :password %>
+  </div>
+  <div class="textfieldright">  
+    <%= f.password_field :password, :class => "textfield" %>
   </div>
 
-  <div class="field">
+  <div class="userlabelleft">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="textfieldright">
+    <%= f.password_field :password_confirmation, :class => "textfield" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="buttonright">
+    <%= f.submit 'save User',:class => "submit_button"%>
   </div>
 <% end %>

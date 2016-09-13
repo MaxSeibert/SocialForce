@@ -3,6 +3,25 @@ class Ability
 
   def initialize(user)
     
+    #admin profile
+    if user.admin?
+       can :manage, :all
+    end
+    
+    #employees
+    if user.employee?
+      can :read, :create, :update, :all
+    end
+    
+    #supporter profile, support social business
+    if user.support?
+      can :read, :create, :all
+    end
+    
+    #social project
+    if user.project?
+      can :read, :create, :all
+    end
     
     
     #can :manage, :all if user.role == "admin"

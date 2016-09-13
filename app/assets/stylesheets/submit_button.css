@@ -1,0 +1,14 @@
+.submit_button{
+	background-color: #ADD8E6;
+	border-style: groove;
+	border-radius: 50px;
+	border-width: 3px;
+	height: 50px;
+	width: 150px;
+}
+
+.buttonright{
+
+	text-align: right;
+	
+}

@@ -1,9 +1,10 @@
 *{margin: 0px; padding 0px}
-#topMenueContainer{margin-top: 0px; 
-				margin-left:0px;
+#topMenueContainer{margin-top: -35px; 
+				margin-left:-40px;
 				margin-right:10px;
-				background-color: blue;
-				width: 1850px;
+				background-color: #556b2f;
+				width: 100%;
+				min-width: 2000px;
 				}
 
 .topMenue{	list-style: none;
@@ -18,9 +19,13 @@
 			text-align: center;
 			font-family: sans-serif;
 			font-size: 25px;
+			color: white;
 			}
 
-.login{margin-left: 500px; 
+.login{
+	margin-left: 720px; 
+	
 		}
+
 
 

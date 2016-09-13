@@ -14,16 +14,16 @@
    		<li>About</li>
    		<li>Team</li>
    		<li>Contact</li>
-   		<li><%= link_to 'Users', users_path %></li>
+   		<li><%= link_to 'Users', users_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
    		<li class="login">
    			<% if current_user %>
 				<!--when user is logged in-->
- 				<%= link_to "Log Out", logout_path %>
+ 				<%= link_to "Log Out", logout_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 10px;' %>
  				<p>Logged in as <%= current_user.email %></p>
  			<% else %>
  				<!-- no user is logged in -->
- 				<%= link_to "Sign Up", signup_path %> or
- 				<%= link_to "Log In", login_path %>
+ 				<%= link_to "Sign Up", signup_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %> or
+ 				<%= link_to "Log In", login_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %>
  			<% end %>
  			<!-- flash warning for user (logged in|logged out) 
  			<% flash.each do |key, value| %>
@@ -38,11 +38,15 @@
     
     <br>
     
+    <div id="socialforce_logo">
+    	<%= image_tag("socialforce_logo.jpg", :alt => "logo")%>
+   	</div>
+    
     <div id="sideMenueContainer">
     <nav class="sideMenue">
-   		<li>About</li>
-   		<li>Team</li>
-   		<li>Contact</li>
+   		<li><%= link_to 'Profile', newprofile_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br>
+   		<li>Team</li><br>
+   		<li>Contact</li><br>
    	</nav>
    	<br><br><br>
     </div>
@@ -75,6 +79,7 @@
 			<p><%= value %></p>
  		<% end %>
 	<% end %>-->
+	<div id="whitespace">
 	<div id="yieldbackground">
 		<div id="yieldcenter">
 			<br><br><br>
@@ -82,6 +87,13 @@
 			<br><br><br>
 		</div>
 	</div>
+	</div>
 	
+	<div id="bottomMenueContainer">
+		<ul class="bottomMenue">
+   			<li>Terms of Service</li>
+   			<li>Contact Us</li>
+   		</ul>
+   	</div>	
   </body>
 </html>

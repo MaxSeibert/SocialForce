@@ -1,0 +1,30 @@
+*{margin: 0px; padding 0px}
+#bottomMenueContainer{
+				margin-left:-40px;
+				margin-right:10px;
+				margin-right:10px;
+				margin-top:20px;
+				background-color: white;
+				width: 100%;
+				min-width: 2000px;
+				overflow: hidden;
+				height: 50px; 
+				}
+
+
+.bottomMenue{	list-style: none;
+		}
+
+.bottomMenue li{
+			margin-top: -33px;
+			margin-right: 150px;	
+			display:block; 
+			height: 50px; 
+			width: 200px; 
+			float: right;
+			line-height: 50px;
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 20px;
+			color: black;
+			}
