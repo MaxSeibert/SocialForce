@@ -2,7 +2,8 @@
 		margin-top: -168px; 
 		margin-left:340px;
 		background-color: rgba(255, 255, 255, 0.9);
-		width: 1400px;
+		width: 75%;
+		min-width: 500px;
 		border-top: 30px solid rgb(0,0,51);
 		
 		}
@@ -10,15 +11,17 @@
 #yieldcenter{
 		margin-left:auto;
 		margin-right: auto;
-		width: 1000px;
+		width: 80%;
+		min-width: 1000px;
 		text-align:center;
+
 		}
 
 #whitespace{
 	margin-right: 0px;
 	margin-left:-40px;
-	width: 100%;
-	min-width: 2000px;
+	width: 105%;
+	min-width: 1500px;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 

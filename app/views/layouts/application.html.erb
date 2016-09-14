@@ -15,14 +15,14 @@
    		<li>Team</li>
    		<li>Contact</li>
    		<li><%= link_to 'Users', users_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
-   		<li class="login">
+   		<!--<li class="login">
    			<% if current_user %>
 				<!--when user is logged in-->
- 				<%= link_to "Log Out", logout_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 10px;' %>
+ 				<!--<%= link_to "Log Out", logout_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 10px;' %>
  				<p>Logged in as <%= current_user.email %></p>
  			<% else %>
  				<!-- no user is logged in -->
- 				<%= link_to "Sign Up", signup_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %> or
+ 				<!--<%= link_to "Sign Up", signup_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %> or
  				<%= link_to "Log In", login_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %>
  			<% end %>
  			<!-- flash warning for user (logged in|logged out) 
@@ -33,6 +33,18 @@
 			<% end %>-->
  		</li>
    	</ul>
+   	<div class="login">
+   			<% if current_user %>
+				<!--when user is logged in-->
+ 				<%= link_to "Log Out", logout_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 10px;' %>
+ 				<p>Logged in as <%= current_user.email %></p>
+ 			<% else %>
+ 				<!-- no user is logged in -->
+ 				<%= link_to "Sign Up", signup_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %> or
+ 				<%= link_to "Log In", login_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %>
+ 			<% end %>
+ 	</div>
+   	
    	<br><br><br>
     </div>
     
