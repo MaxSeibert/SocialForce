@@ -1,10 +1,11 @@
 #yieldbackground{	
-		margin-top: -168px; 
+		margin-top: -310px; 
 		margin-left:340px;
 		background-color: rgba(255, 255, 255, 0.9);
 		width: 75%;
 		min-width: 500px;
 		border-top: 30px solid rgb(0,0,51);
+		min-height: 310px;
 		
 		}
 		

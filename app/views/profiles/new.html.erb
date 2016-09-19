@@ -1,38 +1,6 @@
 <h1>New Profile</h1>
 <br><br>
 
+<%= render 'form', profile: @profile %>
 
-
-<%= form_for :profile do |f| %>
-  <div>
-  	<div class="labelleft">
-  	<%= f.label :name %>
-    </div>
-    <div class="textfieldright">
-  	<%= f.text_field :name, :class => "textfield" %>
-    </div>
-  </div>
-  
-  <div>
-  	<div class="labelleft">
-  	<%= f.label :location %>
-    </div>
-    <div class="textfieldright">
-  	<%= f.text_field :location, :class => "textfield"%>
-    </div>
-  </div>
-  
-  <div>
-  	<div class="labelleft">
-  	<%= f.label :impactfocus %>
-    </div>
-    <div class="textfieldright">
-  	<%= f.select :impactfocus, options_for_select(['option1','option2']),{},:class => 'dropdownm'%>
-    </div>
-  </div>
-  
-  
-  <div class="buttonright">
-    <%= f.submit 'save profile',:class => "submit_button"%>
-  </div>
-<% end %>
+<%= link_to 'Back', profiles_path %>

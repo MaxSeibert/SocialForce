@@ -1,0 +1,89 @@
+
+<%= form_for :profile, url: profiles_path do |f| %>
+
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :name %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.text_field :name, :class => "textfield" %>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :location %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.text_field :location, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :impactfocus %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.select :impactfocus, options_for_select(['Children','option2']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :projecttype %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.select :projecttype, options_for_select(['Continuous','Option2']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :projectname %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.text_field :projectname, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :milestones %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.select :milestones, options_for_select(['100 served/month','150 served/month','200 served/month']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :tfrom %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.text_field :tfrom, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= f.label :tto %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.text_field :tto, :class => "textfield"%>
+    </div>
+  </div>
+  
+   <div>
+  	<div class="labelleft">
+  	<%= f.label :resources %>
+    </div>
+    <div class="textfieldright">
+  	<%= f.select :resources, options_for_select(['Volunteers','small guys','big guys']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+
+  
+  <div class="buttonright">
+    <%= f.submit 'save profile',:class => "submit_button"%>
+  </div>
+<% end %>
