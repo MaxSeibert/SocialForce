@@ -12,11 +12,16 @@
  *
  *= require_tree .
  *= require_self
+ * 
+ * 
+ * picture from: http://wallpapercave.com/wp/t6DYEHw.jpg
  */
 
 body {
 	overflow-x:auto;
 	width:100%;
-	background-image: url("community1.jpg");
+	background-image: url("community2.jpg");
+	background-size: 160% 100%;
+	
 	
 }

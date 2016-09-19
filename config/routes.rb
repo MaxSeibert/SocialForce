@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
+ 
+
+ 
+
+
+
   #root to this side to instant login. (will be changed later)
-  root 'users#new'
+  root 'about#index'
+  
+  get 'about', to: 'about#index', as: 'about'
+  get 'team', to: 'team#index', as: 'team'
+  get 'contact', to: 'contact#index', as: 'contact'
+  get 'tos', to: 'terms_of_service#index', as: 'tos'
+  
+  get 'volunteers', to: 'volunteers#index', as: 'volunteers'
+  get 'gifting', to: 'gifting#index', as: 'gifting'
+  get 'programs', to: 'programs#index', as: 'programs'
   
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'
