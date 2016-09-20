@@ -1,0 +1,2 @@
+module SozialOrganisationsHelper
+end

@@ -1,6 +1,29 @@
-<h1>New Profile</h1>
-<br><br>
+<script>
+  $(document).ready(function(){
+     if($('#profile_projecttype').val() != "Continuous"){
+        $("#profile_tfrom").attr('disabled','disabled');
+        $("#profile_tto").attr('disabled','disabled');
+     }
+     else{
+        $("profile_tfrom").removeAttr('disabled');
+        $("#profile_tto").removeAttr('disabled');
+     }
+
+     $('#profile_projecttype').change(function(){
+        if($(this).val() != "Continuous"){
+         $("#profile_tfrom").attr('disabled','disabled');
+         $("#profile_tto").attr('disabled','disabled');
+        }
+        else{
+          $("#profile_tfrom").removeAttr('disabled');
+          $("#profile_tto").removeAttr('disabled');
+        }
+     })
+  });
+
+</script>
+
+<h1 class="headingBig">New Profile</h1>
+<br><br><br><br>
 
 <%= render 'form', profile: @profile %>
-
-<%= link_to 'Back', profiles_path %>

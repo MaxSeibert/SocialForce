@@ -14,14 +14,25 @@
  *= require_self
  * 
  * 
- * picture from: http://wallpapercave.com/wp/t6DYEHw.jpg
+ * picture from: http://images.google.de/imgres?imgurl=http%3A%2F%2Ffeelgrafix.com%2Fdata_images%2Fout%2F3%2F754718-blue-wallpaper.jpg&imgrefurl=http%3A%2F%2Ffeelgrafix.com%2F754502-blue-sky-wallpaper.html&h=800&w=1280&tbnid=sTQpjXVHcS-d0M%3A&docid=pdL1nQcSKld8CM&ei=9HDhV-zsA8KfaKXiguAJ&tbm=isch&iact=rc&uact=3&dur=3329&page=8&start=183&ndsp=25&ved=0ahUKEwjstqCuu57PAhXCDxoKHSWxAJw4ZBAzCFsoWTBZ&bih=904&biw=995
  */
 
 body {
 	overflow-x:auto;
 	width:100%;
-	background-image: url("community2.jpg");
-	background-size: 160% 100%;
+	background-image: url("community4.jpg");
+	background-size: 160% 160%;
 	
+	
+}
+
+.headingBig {
+	color: black;
+	font-size:60px;
+}
+
+.headingSmall {
+	color: black;
+	font-size:20px;
 	
 }

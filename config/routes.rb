@@ -5,6 +5,20 @@ Rails.application.routes.draw do
 
 
 
+  get 'matches/index'
+
+  get 'matches/new'
+
+  get 'matches/show'
+
+  get 'sozial_organisations/index'
+
+  get 'sozial_organisations/show'
+
+  get 'sozial_organisations/new'
+
+  get 'sozial_organisations/create'
+
   #root to this side to instant login. (will be changed later)
   root 'about#index'
   
@@ -27,8 +41,8 @@ Rails.application.routes.draw do
   
   resources :profiles
   
- 
-
+  resources :contact, only: [:index, :new, :create]
+  post "/contact" => "contact#create", :as => :create_contact
   
   #post 'profiles/new'
   #get 'newprofile', to: 'profiles#new', as: 'newprofile'

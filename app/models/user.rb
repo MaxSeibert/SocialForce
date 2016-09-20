@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   
-  has_many :profile
+  has_one :profile
   
   
   validates :first_name,

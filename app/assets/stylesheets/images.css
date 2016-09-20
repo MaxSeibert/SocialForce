@@ -1,8 +1,8 @@
-#logo{
-	width:225px;
+#socialforcelogo{
+	width:200px;
 	height:74px;
-	
-	
+	margin-left: 20px;
+	margin-top:-10px;
 }
 
 .imagecontainer{
@@ -13,13 +13,19 @@
 
 
 .imageleft{
-	margin-right:100px;
+	margin-right:10%;
 	
 }
 
 .imageright{
-	margin-left:100px;
+	margin-left:10%;
 	
+}
+
+.teamLogo{
+	width:auto;
+	height:200px;;
+
 }
 
 

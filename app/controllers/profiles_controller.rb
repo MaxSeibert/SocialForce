@@ -32,6 +32,7 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
     
     if @profile.save
       redirect_to @profile, notice: 'Profile was successfully created.'
+      session[:return_to] ||= request.referer
     else
       render :new
     end

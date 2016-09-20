@@ -1,4 +1,3 @@
-
 <%= form_for :profile, url: profiles_path do |f| %>
 
   <div>
@@ -24,22 +23,22 @@
   	<%= f.label :impactfocus %>
     </div>
     <div class="textfieldright">
-  	<%= f.select :impactfocus, options_for_select(['Children','option2']),{},:class => 'dropdownm'%>
+  	<%= f.select :impactfocus, options_for_select(['Children','Homeless','Environment','Nature','Sozial Network','Online-Communitiy']),{},:class => 'dropdownm'%>
     </div>
   </div>
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :projecttype %>
+  	<%= f.label :projecttype, 'Project Type' %>
     </div>
     <div class="textfieldright">
-  	<%= f.select :projecttype, options_for_select(['Continuous','Option2']),{},:class => 'dropdownm'%>
+  	<%= f.select :projecttype, options_for_select(['Continuous','One-Time']),{},:class => 'dropdownm'%>
     </div>
   </div>
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :projectname %>
+  	<%= f.label :projectname, 'Project Name' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :projectname, :class => "textfield"%>
@@ -57,7 +56,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :tfrom %>
+  	<%= f.label :tfrom, 'from' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :tfrom, :class => "textfield"%>
@@ -66,7 +65,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :tto %>
+  	<%= f.label :tto, 'to' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :tto, :class => "textfield"%>
@@ -78,12 +77,12 @@
   	<%= f.label :resources %>
     </div>
     <div class="textfieldright">
-  	<%= f.select :resources, options_for_select(['Volunteers','small guys','big guys']),{},:class => 'dropdownm'%>
+  	<%= f.select :resources, options_for_select(['Volunteers','Money','Equipment']),{},:class => 'dropdownm'%>
     </div>
   </div>
 
-  
+
   <div class="buttonright">
-    <%= f.submit 'save profile',:class => "submit_button"%>
+    <%= f.submit 'next Step',:class => "submit_button"%>
   </div>
 <% end %>
