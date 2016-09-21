@@ -2,24 +2,26 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    #Guest
+    user ||= User.new
     
     #admin profile
-    if user.admin?
+    if user.role? :admin
        can :manage, :all
     end
     
     #employees
-    if user.employee?
+    if user.role? :employee
       can :read, :create, :update, :all
     end
     
     #supporter profile, support social business
-    if user.support?
+    if user.role? :support
       can :read, :create, :all
     end
     
     #social project
-    if user.project?
+    if user.role? :organisation
       can :read, :create, :all
     end
     

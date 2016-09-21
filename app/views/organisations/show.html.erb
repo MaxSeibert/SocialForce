@@ -1,0 +1,54 @@
+<h1>Organisations#show</h1>
+<p>Find me in app/views/organisations/show.html.erb</p>
+<p>
+  <strong>Name:</strong>
+  <%= @organisation.oname %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @organisation.olocation %>
+</p>
+
+<p>
+  <strong>Impact focus area:</strong>
+  <%= @organisation.oimpactfocus %>
+</p>
+
+<p>
+  <strong>Project type:</strong>
+  <%= @organisation.oprojecttype %>
+</p>
+
+
+
+<p>
+  <strong>Milestones:</strong>
+  <%= @organisation.omilestones %>
+</p>
+
+<p>
+  <strong>from:</strong>
+  <%= @organisation.otfrom %>
+</p>
+
+<p>
+  <strong>to:</strong>
+  <%= @organisation.otto %>
+</p>
+
+<p>
+  <strong>amount:</strong>
+  <%= @organisation.oamount %>
+</p>
+<p>
+  <strong>equipment:</strong>
+  <%= @organisation.oequipment %>
+</p>
+<p>
+  <strong>staff:</strong>
+  <%= @organisation.ostaff %>
+</p>
+
+<%= link_to 'Edit', edit_organisation_path(@organisation) %>
+<%= link_to 'New Profile', new_organisation_path(@organisation) %> |

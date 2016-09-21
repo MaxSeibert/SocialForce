@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mail_form'
 gem 'simple_form'
+
+gem 'validates_timeliness', '~> 4.0'
+gem 'date_validator'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

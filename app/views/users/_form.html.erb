@@ -45,7 +45,17 @@
   <div class="textfieldright">
     <%= f.password_field :password_confirmation, :class => "textfield" %>
   </div>
-
+  
+  <%if current_user!= nil%>
+  	<% if current_user.role=="admin" || current_user.role=="employee"%> 
+ 		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  		<%= f.label value: @user.role %>
+  	<%else%>
+  		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+ 	<%end%>
+  <%else%>
+  	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  <%end%>		
   <div class="buttonright">
     <%= f.submit 'save User',:class => "submit_button"%>
   </div>

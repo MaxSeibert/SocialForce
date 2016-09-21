@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919150444) do
+ActiveRecord::Schema.define(version: 20160921172132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "matches", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.integer  "score"
+    t.string   "projecttype"
+    t.string   "milestones"
+    t.date     "tfrom"
+    t.date     "tto"
+    t.integer  "amount"
+    t.integer  "equipment"
+    t.integer  "staff"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "profile_id"
+  end
+
+  create_table "organisations", force: :cascade do |t|
+    t.string   "oname"
+    t.string   "olocation"
+    t.string   "oimpactfocus"
+    t.string   "oprojecttype"
+    t.string   "omilestones"
+    t.date     "otfrom"
+    t.date     "otto"
+    t.integer  "oamount"
+    t.integer  "oequipment"
+    t.integer  "ostaff"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +58,22 @@ ActiveRecord::Schema.define(version: 20160919150444) do
     t.date     "tfrom"
     t.date     "tto"
     t.string   "resources"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+  end
+
+  create_table "sozial_organisations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "impactfocus"
+    t.string   "projecttype"
+    t.string   "milestones"
+    t.date     "tfrom"
+    t.date     "tto"
+    t.integer  "amount"
+    t.integer  "equipment"
+    t.integer  "staff"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"

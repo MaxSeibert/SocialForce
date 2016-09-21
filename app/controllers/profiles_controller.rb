@@ -31,8 +31,11 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
     @profile = current_user.profile.new(profile_params)
     
     if @profile.save
-      redirect_to @profile, notice: 'Profile was successfully created.'
+      
+      #redirect_to @profile, notice: 'Profile was successfully created.'
+      redirect_to new_match_path(request.parameters)
       session[:return_to] ||= request.referer
+      #redirect_to :controller => 'matches', :action => 'create'
     else
       render :new
     end
@@ -51,7 +54,7 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
     # Only allow a trusted parameter "white list" through. 
     def profile_params
-      params.require(:profile).permit(:name, :location, :impactfocus, :projecttype, :projectname, :milestones, :tfrom, :tto, :resources)
+      params.require(:profile).permit(:name, :location, :impactfocus, :projecttype, :projectname, :milestones,:tfrom, :resources)
     end
 
 end

@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
   
-  has_one :profile
-  
+  has_many :profile
+  has_many :organisation
   
   validates :first_name,
             presence: true
@@ -15,9 +15,22 @@ class User < ApplicationRecord
               with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
             }
             
+         
+            
   def to_s
     "#{first_name} #{last_name}"
   end   
+  
+  
+  #Role definition
+  #ROLES = [ :admin , :employee, :sproject, :support ]
+  ROLES = %w[admin employee sproject support].freeze
+  ROLESA = %w[project support].freeze
+  
+  
+  def is?( requested_role )
+    self.role == requested_role.to_s
+  end
   
   
 end

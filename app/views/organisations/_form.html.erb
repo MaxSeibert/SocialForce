@@ -1,0 +1,96 @@
+<%= form_for :organisation, url: organisations_path do |o| %>
+
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :oname %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :oname, :class => "textfield" %>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :olocation %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :olocation, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :oimpactfocus %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.select :oimpactfocus, options_for_select(['Children','Homeless','Environment','Nature','Sozial Network','Online-Communitiy']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :oprojecttype, 'Project Type' %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.select :oprojecttype, options_for_select(['Continuous','One-Time']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :omilestones %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.select :omilestones, options_for_select(['100 served/month','150 served/month','200 served/month']),{},:class => 'dropdownm'%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :otfrom, 'tfrom' %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :otfrom, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :otto, 'to' %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :otto, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :oamount %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :oamount, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :oequipment %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :oequipment, :class => "textfield"%>
+    </div>
+  </div>
+  
+  <div>
+  	<div class="labelleft">
+  	<%= o.label :ostaff %>
+    </div>
+    <div class="textfieldright">
+  	<%= o.text_field :ostaff, :class => "textfield"%>
+    </div>
+  </div>
+
+  <div class="buttonright">
+    <%= o.submit 'save Profile',:class => "submit_button"%>
+  </div>
+<% end %>

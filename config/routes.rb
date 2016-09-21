@@ -5,19 +5,13 @@ Rails.application.routes.draw do
 
 
 
-  get 'matches/index'
+  
 
-  get 'matches/new'
+  
 
-  get 'matches/show'
 
-  get 'sozial_organisations/index'
+  
 
-  get 'sozial_organisations/show'
-
-  get 'sozial_organisations/new'
-
-  get 'sozial_organisations/create'
 
   #root to this side to instant login. (will be changed later)
   root 'about#index'
@@ -38,8 +32,12 @@ Rails.application.routes.draw do
   
   
   resources :users
-  
   resources :profiles
+  resources :organisations  
+  
+  resources :matches do
+     match "/details", :to => "organisations#details", :as => "details", via: [:get, :post]
+  end
   
   resources :contact, only: [:index, :new, :create]
   post "/contact" => "contact#create", :as => :create_contact

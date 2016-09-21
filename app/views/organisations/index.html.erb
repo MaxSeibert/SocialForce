@@ -1,0 +1,45 @@
+<h1>Sozial Organisation Profiles</h1><br />
+
+<table class="center">
+  <thead>
+    <tr>
+      <th>profile name </th>
+      <th>Location </th>
+      <th>Impact focus area</th>
+      <th>Project type</th>
+      <th> Milestones </th>
+      <th>   from   </th>
+      <th>   to     </th>
+      <th>amount</th>
+      <th>equipment</th>
+      <th>staff</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organisations.each do |organisation| %>
+      <tr>
+        <td><%= organisation.oname %></td>
+        <td><%= organisation.olocation %></td>
+        <td><%= organisation.oimpactfocus %></td>
+        <td><%= organisation.oprojecttype %></td>
+        <td><%= organisation.omilestones %></td>
+        <td><%= organisation.otfrom %></td>
+        <td><%= organisation.otto %></td>
+        <td><%= organisation.oamount %></td>
+        <td><%= organisation.oequipment %></td>
+        <td><%= organisation.ostaff %></td>
+		<td><%= link_to 'Show', organisation %></td>
+        <td><%= link_to 'Edit', edit_organisation_path(organisation) %></td>
+        <td><%= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile', new_organisation_path %>
