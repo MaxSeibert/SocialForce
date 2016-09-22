@@ -80,8 +80,10 @@
   	<%= f.select :resources, options_for_select(['Money','Volunteers','Equipment']),{},:class => 'dropdownm'%>
     </div>
   </div>
-
-
+	
+	
+	<%= hidden_field_tag(:profileid, 5) %>	
+	
   <div class="buttonright">
     <%= f.submit 'next Step',:class => "submit_button"%>
   </div>

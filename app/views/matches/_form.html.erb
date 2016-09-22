@@ -1,6 +1,26 @@
 <%= form_for :match, url: matches_path do |m| %>
-<%= @match.name %>
-<%= @match.amount %>
-<%= @match.equipment%>
-<%= @match.staff %>
+<br><br>
+<h1 class="match_score"> <%= m.label :match, @score %> </h1>
+<br><br><br><br>
+<h1 class="match_name"> <%= m.label :name, @name %> </h1>
+<br><br>
+<%= link_to  'Details', {controller: 'organisations', action: 'details', :oid => @oid }%>
+<br><br>
+<h1 class="headingSmall"> Looks for </h1>
+<br><br>
+<div class="match_amount"><%= image_tag('amount.png', size: '40') %> <%= m.label :amount,@amount %></div>
+<div class="match_equipment"><%= image_tag('equipment.png', size:'30') %><%= m.label :equipment,@equipment%></div>
+<div class="match_staff"><%= image_tag('staff.png', size:'30') %><%= m.label :staff,@staff %></div>
+<br><br><br><br>
+<%= hidden_field_tag(:score, @score) %>
+<%= hidden_field_tag(:name, @name) %>
+<%= hidden_field_tag(:amount, @amount) %>
+<%= hidden_field_tag(:equipment, @equipment) %>
+<%= hidden_field_tag(:staff, @staff) %>
+<%= hidden_field_tag(:oid, @oid) %>
+<%= hidden_field_tag(:user_id, @user_id) %>
+<%= hidden_field_tag(:profileid, @profileid) %>
+<div>
+    <%= m.submit 'Yes we support!',:class => "match_submit_button"%>
+  </div>
 <%end%>

@@ -30,10 +30,12 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
     #@profile = Profile.find_by_user_id(current_user.id)
     @profile = current_user.profile.new(profile_params)
     
+    
     if @profile.save
       
+      @profileid = @profile.id
       #redirect_to @profile, notice: 'Profile was successfully created.'
-      redirect_to new_match_path(request.parameters)
+      redirect_to findmatch_path(request.parameters.merge({:profileid => @profileid}))
       session[:return_to] ||= request.referer
       #redirect_to :controller => 'matches', :action => 'create'
     else

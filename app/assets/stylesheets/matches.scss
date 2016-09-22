@@ -1,3 +1,44 @@
 // Place all the styles related to the matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.match_score {
+    color: blue;
+    font-size: 50px;
+}
+
+.match_name {
+    color: black;
+    font-size: 40px;
+}
+
+.match_amount{
+    color: black;
+    font-size: 40px;
+  
+}
+
+.match_staff{
+    color: black;
+    font-size: 30px;
+    float: left;
+    margin-left: 70px;
+}
+
+.match_equipment{
+    color: black;
+    font-size: 30px;
+    float: right;
+    margin-right: 70px;
+
+}
+
+.match_submit_button {
+  background-color: #ADD8E6;
+  border-style: groove;
+  border-radius: 50px;
+  border-width: 3px;
+  height: 50px;
+  width: 150px;
+  
+}

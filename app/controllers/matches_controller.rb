@@ -1,16 +1,43 @@
 class MatchesController < ApplicationController
+  before_action :set_match, only: [ :details, :show] 
+  
   def index
+    @match = Matches.all
   end
 
   def new
-    @match = Matches.new
+    @name = params[:oname]
+    @score = params[:score]
+    @projecttype = params[:oprojecttype]
+    @tfrom = params[:otfrom]
+    @tto = params[:otto]
+    @amount = params[:oamount]
+    @staff = params[:ostaff]
+    @equipment = params[:oequipment]
+    @oid = params[:oid]
+    @user_id = current_user.id
+    @profileid = params[:profileid]    
+    
   end
 
   def show
+    @match = Matches.find(params[:id])
+    #@mname = params[:name]
+    #@mscore = params[:score]
+    #@projecttype = params[:projecttype]
+    #@mtfrom = params[:tfrom]
+    #@mtto = params[:tto]
+    #@mamount = params[:amount]
+    ##@staff = params[:staff]
+    #@mequipment = params[:equipment]
+    #@oid = params[:oid]
+    #@match = Matches.find(params[:id])
   end
   
   def create
-    @match = current_profile.Matches.new(match_params)
+    
+    #request.params. except(:utf8, :authenticity_token, :commit)
+    @match = Matches.new(match_params)
     
     if @match.save
       redirect_to @match, notice: 'Match was successfull'
@@ -20,13 +47,11 @@ class MatchesController < ApplicationController
     end
   end
   
-  def details
-    redirect_to @organisation.find(1)
-  end
+ 
   
   private
   def match_params
-      params.require(:match).permit(:name, :location, :score, :projecttype, :milestones, :tfrom, :tto, :amount, :equipment, :staff)
+      params.permit(:name, :location, :score, :projecttype, :milestones, :tfrom, :tto, :amount, :equipment, :staff, :user_id, :profileid)
   end
   
   def get_organisation_params
@@ -36,5 +61,8 @@ class MatchesController < ApplicationController
     #@match.staff = @organisation.find(1).staff
   end
   
+  def set_match
+      @match = Matches.find(params[:id])
+  end  
   
 end

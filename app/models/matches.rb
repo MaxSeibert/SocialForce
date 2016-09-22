@@ -6,15 +6,19 @@ class Matches < ApplicationRecord
             presence: true
 
   validates :location,
-            presence: true
+            presence: true,
+            allow_blank: true
             
   validates :score,
             presence: true
             
   validates :projecttype, 
-            presence: true
+            presence: true,
+            allow_blank: true
+            
   validates :milestones, 
-            presence: true 
+            presence: true, 
+            allow_blank: true
              
   validates :tfrom, 
             date: true,
@@ -24,16 +28,13 @@ class Matches < ApplicationRecord
             allow_blank: true          
 
   validates :amount,
-            presence: true,
-            allow_blank: true
+            presence: true
        
   validates :equipment, 
-            presence:true,
-            allow_blank: true
+            presence:true
              
   validates :staff,
-            presence: true,
-            allow_blank: true
+            presence: true
 
             
        

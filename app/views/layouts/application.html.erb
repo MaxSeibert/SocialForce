@@ -16,8 +16,8 @@
    		<li><%= link_to 'Contact', contact_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
    		<%if current_user!= nil%>
   			<% if current_user.role=="admin" || current_user.role=="employee"%>
-  				<li><%= link_to 'Users', users_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
-   				<li><%= link_to 'Profiles', profiles_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
+  				<li><%= link_to 'Admin', adminarea_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
+   				<li>blank</li>
    			<%else%>
    				<li>blank</li>
    				<li>blank</li>
@@ -72,11 +72,11 @@
     	<% if current_user %>
     		<% if current_user.role=="admin" || current_user.role=="employee" || current_user.role=="organisation"%>
   				<li><%= link_to 'Profile', new_profile_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
-   				<li class="space2"><%= link_to "Impact Manager", organisations_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br>
+   				<!--<li class="space2"><%= link_to "Impact Manager", organisations_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br>--></br>
    			<% end %>
    			<% if current_user.role=="support"%>
   				<li><%= link_to 'Profile', new_organisation_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
-   				<li class="space2"><%= link_to "Impact Manager", profiles_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br>
+   				<!--<li class="space2"><%= link_to "Impact Manager", profiles_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br></br>-->
    			<% end %>
    		<% end %>
    		<li><%= link_to "Volunteers", volunteers_path , :style => 'color:black;background-color:transparent;padding:11px 64px;'%></li><br><br>
@@ -116,7 +116,6 @@
 		<ul class="bottomMenue">
    			<li><%= link_to "Terms of service", tos_path, :class=>'railslink',:style => 'color:black;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
    			<li><%= link_to "contact us", contact_path, :class=>'railslink',:style => 'color:black;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
-   			<li><%= link_to 'Supporter Profile', new_organisation_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li>
    		</ul>
    	</div>	
   </body>

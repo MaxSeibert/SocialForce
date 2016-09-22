@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160921172132) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
-    t.integer  "profile_id"
+    t.integer  "profileid"
   end
 
   create_table "organisations", force: :cascade do |t|
@@ -58,22 +58,6 @@ ActiveRecord::Schema.define(version: 20160921172132) do
     t.date     "tfrom"
     t.date     "tto"
     t.string   "resources"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "user_id"
-  end
-
-  create_table "sozial_organisations", force: :cascade do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "impactfocus"
-    t.string   "projecttype"
-    t.string   "milestones"
-    t.date     "tfrom"
-    t.date     "tto"
-    t.integer  "amount"
-    t.integer  "equipment"
-    t.integer  "staff"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
