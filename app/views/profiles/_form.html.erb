@@ -2,7 +2,7 @@
 
   <div>
   	<div class="labelleft">
-  	<%= f.label :name %>
+  	<%= f.label :name, 'Name' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :name, :class => "textfield" %>
@@ -11,7 +11,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :location %>
+  	<%= f.label :location, 'Location' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :location, :class => "textfield"%>
@@ -20,7 +20,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :impactfocus %>
+  	<%= f.label :impactfocus, 'Impact Focus' %>
     </div>
     <div class="textfieldright">
   	<%= f.select :impactfocus, options_for_select(['Children','Homeless','Environment','Nature','Sozial Network','Online-Communitiy']),{},:class => 'dropdownm'%>
@@ -47,7 +47,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= f.label :milestones %>
+  	<%= f.label :milestones, 'Milestones' %>
     </div>
     <div class="textfieldright">
   	<%= f.select :milestones, options_for_select(['100 served/month','150 served/month','200 served/month']),{},:class => 'dropdownm'%>
@@ -55,8 +55,8 @@
   </div>
   
   <div>
-  	<div class="labelleft">
-  	<%= f.label 'from' %>
+  	<div class="labelleft2">
+  	<%= f.label :tfrom, 'From: DD.MM.YYYY' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :tfrom, :class => "textfield"%>
@@ -64,8 +64,8 @@
   </div>
   
   <div>
-  	<div class="labelleft">
-  	<%= f.label :tto, 'to' %>
+  	<div class="labelleft2">
+  	<%= f.label :tto, 'To: DD.MM.YYYY' %>
     </div>
     <div class="textfieldright">
   	<%= f.text_field :tto, :class => "textfield"%>
@@ -74,15 +74,12 @@
   
    <div>
   	<div class="labelleft">
-  	<%= f.label :resources %>
+  	<%= f.label :resources, 'Resources' %>
     </div>
     <div class="textfieldright">
   	<%= f.select :resources, options_for_select(['Money','Volunteers','Equipment']),{},:class => 'dropdownm'%>
     </div>
   </div>
-	
-	
-	<%= hidden_field_tag(:profileid, 5) %>	
 	
   <div class="buttonright">
     <%= f.submit 'next Step',:class => "submit_button"%>

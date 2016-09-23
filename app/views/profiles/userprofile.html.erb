@@ -1,0 +1,45 @@
+<h1>My Profiles</h1><br />
+
+<table class="center">
+  <thead>
+  	
+    <tr>
+      <th style="border-right: black solid 2px;">profile name </th>
+      <th style="border-right: black solid 2px;">Location  </th>
+      <th style="border-right: black solid 2px;">Impactfocus</th>
+      <th style="border-right: black solid 2px;">Project type </th>
+      <th style="border-right: black solid 2px;">Project name </th>
+      <th style="border-right: black solid 2px;">   from    </th>
+      <th style="border-right: black solid 2px;">   to      </th>
+      <th>Resources </th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  	<tbody>
+	<% @profiles.each do |profile| %>
+      <tr>
+      	<% if @user_id == profile.user_id %> 
+        <td><%= profile.name %></td>
+        <td><%= profile.location %></td>
+        <td><%= profile.impactfocus %></td>
+        <td><%= profile.projecttype %></td>
+        <td><%= profile.projectname %></td>
+        <td><%= profile.tfrom %></td>        
+        <td><%= profile.tto %></td>
+        <td><%= profile.resources %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      
+     		
+     	<%end%>
+      </tr>
+	<%end%>
+	
+	</tbody>
+
+</table>
+
+<%= link_to 'new Profile', new_profile_path %>
+
+<br>

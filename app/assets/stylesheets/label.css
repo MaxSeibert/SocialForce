@@ -9,6 +9,17 @@
 	margin-left:5%;
 }
 
+.labelleft2{
+	width: 25%;
+    float: left;
+    text-align: left;
+	height: 70px;
+	font-size: 25px;
+	line-height: 38px;
+	color: black;
+	margin-left:5%;
+}
+
 .userlabelleft{
 	width: 30%;
     float: left;

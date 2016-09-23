@@ -8,6 +8,7 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   def show
     #@profile = Profile.find_by_user_id(current_user.id)
+    @profile = Profile.find_by(:user_id => current_user.id)
   end
 
   def new
@@ -19,6 +20,25 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
   end
 
   def edit
+  end
+  
+  def show_user_profile
+    @user_id = current_user.id
+    #@profile = Profile.where(user_id: current_user[:id])
+    @profiles = Profile.all
+    @test = false
+    
+    if Profile.find(current_user.id) == nil
+      @test = true
+    end
+    
+    
+    #if @profiles != nil
+    render :userprofile
+    #else
+        #@profile = current_user.profile.new
+      #render :new
+    #end    
   end
 
   # POST /profiles
@@ -45,7 +65,7 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
   
   def destroy
     @profile.destroy
-    redirect_to profiles_url, notice: 'Profile was successfully destroyed.'
+    redirect_to new_profile_url, notice: 'Profile was successfully destroyed.'
   end
   
   private
@@ -56,7 +76,7 @@ before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
     # Only allow a trusted parameter "white list" through. 
     def profile_params
-      params.require(:profile).permit(:name, :location, :impactfocus, :projecttype, :projectname, :milestones,:tfrom, :resources)
+      params.require(:profile).permit(:name, :location, :impactfocus, :projecttype, :projectname, :milestones,:tfrom,:tto, :resources)
     end
 
 end

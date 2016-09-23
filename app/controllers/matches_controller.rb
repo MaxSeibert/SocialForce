@@ -34,6 +34,12 @@ class MatchesController < ApplicationController
     #@match = Matches.find(params[:id])
   end
   
+  def show_user_matches
+    @user_id = current_user.id
+    @match = Matches.all
+    render :usermatches
+  end
+  
   def create
     
     #request.params. except(:utf8, :authenticity_token, :commit)

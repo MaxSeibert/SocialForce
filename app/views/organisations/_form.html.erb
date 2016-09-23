@@ -2,7 +2,7 @@
 
   <div>
   	<div class="labelleft">
-  	<%= o.label :oname %>
+  	<%= o.label :oname , 'Name'%>
     </div>
     <div class="textfieldright">
   	<%= o.text_field :oname, :class => "textfield" %>
@@ -11,7 +11,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= o.label :olocation %>
+  	<%= o.label :olocation, 'Location' %>
     </div>
     <div class="textfieldright">
   	<%= o.text_field :olocation, :class => "textfield"%>
@@ -20,7 +20,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= o.label :oimpactfocus %>
+  	<%= o.label :oimpactfocus, 'Impact Focus' %>
     </div>
     <div class="textfieldright">
   	<%= o.select :oimpactfocus, options_for_select(['Children','Homeless','Environment','Nature','Sozial Network','Online-Communitiy']),{},:class => 'dropdownm'%>
@@ -38,7 +38,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= o.label :omilestones %>
+  	<%= o.label :omilestones, 'Milestones'%>
     </div>
     <div class="textfieldright">
   	<%= o.select :omilestones, options_for_select(['100 served/month','150 served/month','200 served/month']),{},:class => 'dropdownm'%>
@@ -46,8 +46,8 @@
   </div>
   
   <div>
-  	<div class="labelleft">
-  	<%= o.label :otfrom, 'tfrom' %>
+  	<div class="labelleft2">
+  	<%= o.label :otfrom, 'From: DD.MM.YYYY' %>
     </div>
     <div class="textfieldright">
   	<%= o.text_field :otfrom, :class => "textfield"%>
@@ -55,8 +55,8 @@
   </div>
   
   <div>
-  	<div class="labelleft">
-  	<%= o.label :otto, 'to' %>
+  	<div class="labelleft2">
+  	<%= o.label :otto, 'To: DD.MM.YYYY' %>
     </div>
     <div class="textfieldright">
   	<%= o.text_field :otto, :class => "textfield"%>
@@ -65,7 +65,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= o.label :oamount %>
+  	<%= o.label :oamount, 'Amount' %>
     </div>
     <div class="textfieldright">
   	<%= o.text_field :oamount, :class => "textfield"%>
@@ -74,7 +74,7 @@
   
   <div>
   	<div class="labelleft">
-  	<%= o.label :oequipment %>
+  	<%= o.label :oequipment, 'Equipment' %>
     </div>
     <div class="textfieldright">
   	<%= o.text_field :oequipment, :class => "textfield"%>

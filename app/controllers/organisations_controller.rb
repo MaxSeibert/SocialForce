@@ -33,7 +33,7 @@ class OrganisationsController < ApplicationController
   
   def destroy
     @organisation.destroy
-    redirect_to organisations_url, notice: 'Profile was successfully destroyed.'
+    redirect_to new_organisation_url, notice: 'Profile was successfully destroyed.'
   end
   
   def details
