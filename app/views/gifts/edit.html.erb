@@ -1,0 +1,11 @@
+<h1>Editing Gift</h1>
+
+<%= render 'form', gift: @gift %>
+
+<div style="float: center; ">
+  <%= image_tag(@gift.image_url.to_s , :size => "50x50") %>
+  </div>	
+
+
+<%= link_to 'Show', @gift %> |
+<%= link_to 'Back', gifts_path %>

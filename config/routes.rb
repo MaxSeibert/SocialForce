@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :gifts
   #root to this side to instant login. (will be changed later)
   root 'about#index'
   
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
   
   get 'volunteers', to: 'volunteers#index', as: 'volunteers'
   get 'gifting', to: 'gifting#index', as: 'gifting'
+
+  
   get 'programs', to: 'programs#index', as: 'programs'
  
   get 'signup', to: 'users#new', as: 'signup'
@@ -33,13 +36,15 @@ Rails.application.routes.draw do
   #Organisations
   resources :organisations  
   
+  
   #matches
   resources :matches
   get "/details" => "organisations#details"
   
   #contact
   resources :contact, only: [:index, :new, :create]
-  post "/contact" => "contact#create", :as => :create_contact
+  post 'contact' => 'contact#create', :as => :create_contact
+  get 'success', to: 'contact#succes', as: 'success'
   
   #post 'profiles/new'
   #get 'newprofile', to: 'profiles#new', as: 'newprofile'

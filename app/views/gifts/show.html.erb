@@ -1,0 +1,21 @@
+<p>
+  <strong>Name:</strong>
+  <%= @gift.giftname %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @gift.heading %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @gift.image %>
+  <div style="float: center; ">
+  <%= image_tag(@gift.image_url.to_s , :size => "50x50") %>
+  </div>	
+</p>
+
+
+<%= link_to 'Edit', edit_gift_path(@gift) %> |
+<%= link_to 'Back', gifts_path %>

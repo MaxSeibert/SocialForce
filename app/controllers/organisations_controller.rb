@@ -3,7 +3,7 @@ class OrganisationsController < ApplicationController
 
  
   def index
-    @organisations = Organisation.all
+    @organisations = Organisation.all.order(:oname)
   end
 
   def new
@@ -50,10 +50,10 @@ class OrganisationsController < ApplicationController
     @profile_resource = params[:profile][:resources]
     @profile_impactfocus = params[:profile][:impactfocus]
     @profile_projecttype = params[:profile][:projecttype]
-    if params[:profile][:tfrom] != nil
+    if params[:profile][:tfrom] != nil && params[:profile][:tfrom] != ""
       @profile_tfrom = Date.parse(params[:profile][:tfrom])
     end
-    if params[:profile][:tto] != nil
+    if params[:profile][:tto] != nil && params[:profile][:tto] != ""
     @profile_tto = Date.parse(params[:profile][:tto])
     end
     @score = 0
@@ -75,7 +75,7 @@ class OrganisationsController < ApplicationController
       
       #set score for Matching-Process 
       #When resource Money is selected
-      if @profile_resource == "Money"
+      if @profile_resource == "Money" && o.oamount != nil
           if o.oamount >= 10000
             @score_helper +=10
           end
@@ -129,7 +129,7 @@ class OrganisationsController < ApplicationController
        end   
        
        #resource equipment is selected
-       if @profile_resource == "Equipment"
+       if @profile_resource == "Equipment" && o.oequipment != nil
           if o.oequipment >= 100
             @score_helper +=10
           end
@@ -183,7 +183,7 @@ class OrganisationsController < ApplicationController
        end
        
        #resource staff
-       if @profile_resource == "Volunteers"
+       if @profile_resource == "Volunteers" && o.ostaff != nil
           if o.ostaff>= 100
             @score_helper +=10
           end
@@ -259,19 +259,19 @@ class OrganisationsController < ApplicationController
        end
        
        #tto calculation
-       if @profile_tto != nil
-         if o.otto != nil
-        if @profile_tto == o.otto
-         @score_helper += 10
-        end
+       if @profile_tto != nil 
+        if o.otto != nil
+            if @profile_tto == o.otto
+            @score_helper += 10
+            end
        
-        if @profile_tto < o.otto
-         @score_helper += 5
-        end
+            if @profile_tto < o.otto
+            @score_helper += 5
+            end
        
-        if @profile_tto > o.otto
-         @score_helper += 0
-        end
+            if @profile_tto > o.otto
+            @score_helper += 0
+            end
         end
        end
        #projecttype calculation
@@ -306,6 +306,8 @@ class OrganisationsController < ApplicationController
     #@organisationparams = [@oid, @oamount_helper, @oequipment_helper, @oimpactfocus_helper, @oname_helper, @otfrom_helper, @otto_helper]
     #@organisation = Organisation.find(@oid)
     
+    #score in % 
+    @score = @score*90/100
     
     redirect_to new_match_path(request.params.merge({:score => @score, :oid => @oid, :oname => @oname,:oprojecttype => @oprojecttype ,:oamount => @oamount, :oequipment => @oequipment, :ostaff => @ostaff, :oimpactfocus => @oimpactfocus, :otfrom => @otfrom, :otto => @otto, :ostaff => @ostaff, :profileid => @profileid})) 
     

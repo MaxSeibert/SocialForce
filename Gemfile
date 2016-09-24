@@ -26,6 +26,9 @@ gem 'turbolinks', '~> 5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
+
 
 gem 'mail_form'
 gem 'simple_form'

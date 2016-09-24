@@ -34,11 +34,26 @@
 }
 
 .match_submit_button {
-  background-color: #ADD8E6;
+  background-color: #32CD32;
   border-style: groove;
   border-radius: 50px;
   border-width: 3px;
   height: 50px;
   width: 150px;
+  
+}
+
+.new_matches_link {
+  background-color: #ADD8E6;
+  float: right;
+  margin-right: 10%;
+  border-style: groove;
+  border-radius: 50px;
+  border-width: 3px;
+  text-decoration: none;
+  height: 30px;
+  width: 100px;
+  line-height: 30px; 
+ 
   
 }

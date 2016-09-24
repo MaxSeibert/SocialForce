@@ -1,4 +1,5 @@
 <%= form_for(user) do |f| %>
+  <div class="usererror">
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -9,43 +10,47 @@
       <% end %>
       </ul>
     </div>
+    <br><br><br>
   <% end %>
-<br>
-  <div class="userlabelleft">
-    <%= f.label :first_name %>
   </div>
-  <div class="textfieldright">
+<br>
+<div class="userbackground">
+  <div class="userlabelleft">
+    <%= f.label 'First Name' %>
+  </div>
+  <div class="usertextfieldright">
     <%= f.text_field :first_name, :class => "textfield" %>
   </div>
 
   <div class="userlabelleft">
-    <%= f.label :last_name %>
+    <%= f.label 'Last Name' %>
   </div>
-  <div class="textfieldright">
+  <div class="usertextfieldright">
     <%= f.text_field :last_name, :class => "textfield" %>
   </div>
 
   <div class="userlabelleft"
-    <%= f.label :email %>
+    <%= f.label 'E-mail' %>
   </div>
-  <div class="textfieldright">
+  <div class="usertextfieldright">
     <%= f.text_field :email, :class => "textfield" %>
   </div>
 
   <div class="userlabelleft">
-    <%= f.label :password %>
+    <%= f.label 'Password'%>
   </div>
-  <div class="textfieldright">  
+  <div class="usertextfieldright">  
     <%= f.password_field :password, :class => "textfield" %>
   </div>
 
   <div class="userlabelleft">
-    <%= f.label :password_confirmation %>
+    <%= f.label 'Password Confirmation' %>
   </div>
-  <div class="textfieldright">
+  <div class="usertextfieldright">
     <%= f.password_field :password_confirmation, :class => "textfield" %>
   </div>
-  
+ </div> 
+<div class="userroleselect">
   <%if current_user!= nil%>
   	<% if current_user.role=="admin" || current_user.role=="employee"%> 
  		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
@@ -56,6 +61,7 @@
   <%else%>
   	<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
   <%end%>		
+ </div> 
   <div class="buttonright">
     <%= f.submit 'save User',:class => "submit_button"%>
   </div>

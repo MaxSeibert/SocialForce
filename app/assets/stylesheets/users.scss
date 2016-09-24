@@ -1,3 +1,45 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.usererror{
+  display: inline-block;
+  
+}
+
+.userroleselect{
+  display: inline-block;
+  width:500px;
+  float: center;
+  margin-top: 100px;
+}
+
+.userlabelleft{
+  float: left;
+  display: inline-block;
+  font-size: 25px;
+  text-align: left;
+  color: red;
+  clear:left;
+  width: 30%;
+  margin-left: 20%;
+}
+
+.usertextfieldright{
+  display: inline-block;
+  float:left;
+  margin-left: 5%;
+}
+
+.textfieldright5{
+  width: 20%;
+    margin-left: 50px;
+    float:right;
+  height: 70px;
+}
+
+.pwconfieldright5{
+  width: 20%;
+    margin-left: 10px;
+    float:right;
+  height: 70px;
+}

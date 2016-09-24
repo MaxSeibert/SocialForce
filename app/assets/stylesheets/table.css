@@ -1,5 +1,34 @@
 table.center{
 	margin-left:auto; 
     margin-right:auto;
+	border: 2px solid;
+	border-collapse:collapse;
+	overflow: scroll;
+	display: inline-block;
+	min-width: 450px;
+	max-width: 950px;
+
+}
+
+thead{
+	width: calc(100% - 18px);
+}
+
+th {
+	background-color: #556b2f;
+	color: white;
+	min-width: 150px;
+	border-bottom: 5px solid black;
+	font-size: 20px;
+	border-left:2px solid black;
+	border-right:2px solid black;
+}
+
+td {
+	background-color: #72bdd4;
+	color: white;
+	border-left:2px solid black;
+	border-right:2px solid black;
+	border-bottom:2px solid black;
 	
 }

@@ -1,0 +1,28 @@
+<%= form_for @gift, html:{multipart:true} do |f| %>
+  
+
+  <div class="userlabelleft">
+    <%= f.label 'Gift Name' %>
+  </div>
+  <div class="usertextfieldright">
+    <%= f.text_field :giftname, :class => "textfield" %>
+  </div>
+
+  <div class="userlabelleft">
+    <%= f.label 'Heading' %>
+  </div>
+  <div class="usertextfieldright">
+    <%= f.text_field :heading, :class => "textfield" %>
+  </div>
+
+  <div class="userlabelleft">
+    <%= f.label 'Image'%>
+  </div>
+  <div class="usertextfieldright">
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

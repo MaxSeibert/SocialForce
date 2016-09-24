@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LoginP</title>
+    <title>SozialForce</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +16,7 @@
    		<li><%= link_to 'Contact', contact_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
    		<%if current_user!= nil%>
   			<% if current_user.role=="admin" || current_user.role=="Employee"%>
-  				<li><%= link_to 'Admin', adminarea_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
+  				<li>blank</li>
    				<li>blank</li>
    			<%else%>
    				<li>blank</li>
@@ -70,8 +70,9 @@
     <div id="sideMenueContainer">
     <nav class="sideMenue">
     	<% if current_user %>
-    		<% if current_user.role=="admin" || current_user.role=="Employee"%>
-  				<li><%= link_to 'Sozial_Organisation', new_profile_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
+    		<% if current_user.role=="Admin" || current_user.role=="Employee"%>
+    			<li><%= link_to 'Admin', adminarea_path, :style => 'color:black;text-decoration: underline;background-color: transparent;padding:11px 64px;' %></li>
+   				<!--<li><%= link_to 'Sozial_Organisation', new_organisation_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li>--><br><br><br>
    				<!--<li class="space2"><%= link_to "Impact Manager", organisations_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br>--></br>
    			<% end %>
    			<% if current_user.role=="Sozail_Organisation"%>
@@ -85,7 +86,7 @@
    			<% end %>
    		<% end %>
    		<li><%= link_to "Volunteers", volunteers_path , :style => 'color:black;background-color:transparent;padding:11px 64px;'%></li><br><br>
-   		<li><%= link_to "Gifting", gifting_path , :style => 'color:black;background-color:transparent;padding:11px 64px;'%></li><br><br>
+   		<li><%= link_to "Gifting", gifts_path , :style => 'color:black;background-color:transparent;padding:11px 64px;'%></li><br><br>
    		<li><%= link_to "Programs", programs_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br>
    	</nav>
    	<br><br><br>
