@@ -15,7 +15,7 @@
    		<li><%= link_to 'Team', team_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
    		<li><%= link_to 'Contact', contact_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
    		<%if current_user!= nil%>
-  			<% if current_user.role=="admin" || current_user.role=="Employee"%>
+  			<% if current_user.role=="Admin" || current_user.role=="Employee"%>
   				<li>blank</li>
    				<li>blank</li>
    			<%else%>

@@ -48,3 +48,10 @@
   <strong>staff:</strong>
   <%= @organisation.ostaff %>
 </p>
+<p>
+  <strong>id:</strong>
+  <%= @organisation.id %>
+</p>
+<%= link_to 'new Gift', new_gift_path(:oid => @organisation.id)=%>
+<br><br><br><br><br><br><br>
+<%= link_to 'Your Gifts', showorga_path(:oid => @organisation.id)=%>

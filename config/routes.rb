@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   
   #Organisations
   resources :organisations  
-  
+  get "/showorga" => "gifts#showorga"
   
   #matches
   resources :matches

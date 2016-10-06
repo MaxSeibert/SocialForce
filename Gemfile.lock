@@ -168,7 +168,7 @@ DEPENDENCIES
   date_validator
   jquery-rails
   mail_form
-  mini_magick (~> 4.3)
+  mini_magick
   pg (~> 0.18)
   puma (~> 3.0)
   rails (~> 5.0.0)

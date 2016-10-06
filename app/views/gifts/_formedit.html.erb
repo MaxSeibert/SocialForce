@@ -1,21 +1,5 @@
 <%= form_for @gift, html:{multipart:true} do |f| %>
   
-<div class="usererror">
-  <% if gift.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(gift.errors.count, "error") %> prohibited this gift from being saved:</h2>
-
-      <ul>
-      <% gift.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-    <br><br><br>
-  <% end %>
-  </div>
-
-
 
   <div class="userlabelleft">
     <%= f.label 'Gift Name' %>
@@ -32,19 +16,15 @@
   </div>
 
   <div class="userlabelleft">
-    <%= f.label 'Image'%>
+    <%= f.label 'Image blubb'%>
   </div>
   <div class="usertextfieldright">
     <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
   </div>
-  
   
 <br><br><br><br><br><br><br><br>
   <div class="submit_button_edit">
     <%= f.button :submit %>
   </div>
-  
-  <%= hidden_field_tag(:oid, @oid) %>
-
-  
 <% end %>

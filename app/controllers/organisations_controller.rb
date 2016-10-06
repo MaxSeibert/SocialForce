@@ -7,19 +7,23 @@ class OrganisationsController < ApplicationController
   end
 
   def new
-    @organisation = Organisation.new
+    @organisation = current_user.organisation.new
   end
 
   def show
   end
   
   def edit
-    @organisation = Organisation.find(params[:id])
+    if current_user.role=="Admin" || current_user.role=="Employee" || current_user.role=="Sozail_Organisation"
+      @organisation = Organisation.find(params[:id])
+    else
+      render :show
+    end
   end
   
   def create
 
-    @organisation = Organisation.new(organisation_params)
+    @organisation = current_user.organisation.new(organisation_params)
   
     if @organisation.save
       redirect_to @organisation, notice: 'Profile was successfully created.'

@@ -9,6 +9,13 @@
 </p>
 
 <p>
+  <strong>Organsiation:</strong>
+  <%= @gift.oid %>
+  <%= link_to  'Details', {controller: 'organisations', action: 'details', :oid => @gift.oid }%>
+</p>
+
+
+<p>
   <strong>Image:</strong>
   <%= @gift.image %>
   <div style="float: center; ">
