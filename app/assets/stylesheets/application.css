@@ -22,6 +22,7 @@ body {
 	width:100%;
 	background-image: url("community4.jpg");
 	background-size: 160% 160%;
+	background-attachment:fixed;
 	
 	
 }
