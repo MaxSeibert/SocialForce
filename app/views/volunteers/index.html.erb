@@ -1,2 +1,24 @@
 <h1>Volunteers#index</h1>
 <p>Find me in app/views/volunteers/index.html.erb</p>
+<table class="center">
+  <thead>
+    <tr>
+      <th>name </th>
+      <th>time </th>
+      <th>date</th>
+      <th>oid</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @volunteers.each do |v| %>
+      <tr>
+        <td><%= v.name %></td>
+        <td><%= v.time %></td>
+        <td><%= v.date %></td>
+        <td><%= v.oid %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

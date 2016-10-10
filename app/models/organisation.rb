@@ -2,6 +2,7 @@ class Organisation < ApplicationRecord
   
   belongs_to :user
   has_many :matches
+  has_many :volunteers
   
    validates :oname,
             presence: true

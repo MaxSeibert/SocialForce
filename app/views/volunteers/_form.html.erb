@@ -1,0 +1,47 @@
+<%= form_for @volunteer, url: volunteers_path do |f| %>
+  
+
+
+
+
+  <div class="userlabelleft">
+    <%= f.label 'Volunteer Name' %>
+  </div>
+  <div class="usertextfieldright">
+    <%= f.text_field :name, :class => "textfield" %>
+  </div>
+  
+  <br /><br /><br />
+  <div class="userlabelleft">
+    <%= f.label 'Select the Organisation' %>
+  </div>
+  <div class="usertextfieldright">
+   <%= select("volunteer", "oid", Organisation.all.collect  {|p| [ p.oname, p.id ] },{:class => 'dropdownm'}) %>
+   
+  </div>
+  <br /><br />
+
+  <div class="userlabelleft">
+    <%= f.label 'time you helped out' %>
+  </div>
+  <div class="usertextfieldright">
+     <%= f.select :time, options_for_select(['0.5 h','1.0 h','1.5 h','2.0 h','2.5 h','3.0 h','3.5 h','4.0 h','4.5 h','5.0 h', '5.0+ h']),{},:class => 'dropdownm'%>
+   
+  </div>
+
+  <div class="userlabelleft">
+    <%= f.label 'Date'%>
+  </div>
+  <div class="usertextfieldright">
+    <%= f.text_field :date, :class => "textfield" %>
+  </div>
+  
+  
+<br><br><br><br><br><br><br><br>
+  <div class="submit_button_edit">
+    <%= f.button :submit %>
+  </div>
+  
+  
+  
+<% end %>

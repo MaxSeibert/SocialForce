@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :volunteers
+  resources :programs
   resources :gifts
   #root to this side to instant login. (will be changed later)
   root 'about#index'
@@ -12,11 +14,11 @@ Rails.application.routes.draw do
   get 'adminarea', to: 'admin_area#show', as: 'adminarea'
   get 'userprofile', to: 'profiles#show_user_profile', as: 'userprofile'
   
-  get 'volunteers', to: 'volunteers#index', as: 'volunteers'
+  #get 'volunteers', to: 'volunteers#index', as: 'volunteers'
   get 'gifting', to: 'gifting#index', as: 'gifting'
 
   
-  get 'programs', to: 'programs#index', as: 'programs'
+  #get 'programs', to: 'programs#index', as: 'programs'
  
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'

@@ -1,2 +1,22 @@
 <h1>Programs#index</h1>
 <p>Find me in app/views/programs/index.html.erb</p>
+<table class="center">
+  <thead>
+    <tr>
+      <th>name </th>
+      <th>heading </th>
+      <th>description</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @programs.each do |p| %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.heading %></td>
+        <td><%= p.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

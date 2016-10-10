@@ -1,0 +1,27 @@
+<h1>show</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @program.name %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @program.heading %>
+</p>
+
+<p>
+  <strong>Organsiation:</strong>
+  <%= @program.oid %>
+  <%= link_to  'Details', {controller: 'organisations', action: 'details', :oid => @program.oid }%>
+</p>
+
+
+<p>
+  <strong>Description:</strong>
+  <%= @program.description %>
+  </p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>
