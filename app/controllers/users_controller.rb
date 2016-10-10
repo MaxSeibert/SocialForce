@@ -24,6 +24,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      #send mail
+      UserMailer.signup_confirmation(@user).deliver
+      
       #user instant login (after creation)
       session[:user_id] = @user.id
       redirect_to @user, notice: 'User was successfully created.'
