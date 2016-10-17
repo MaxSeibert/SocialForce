@@ -8,8 +8,8 @@ class UserMailer < ApplicationMailer
   def signup_confirmation(user)
     @greeting = "Hi"
     @user = user
-    #mail to: "impact@social-force.com", subject: "Sign Up Confirmation"
-    mail to: "max-seibert@web.de", subject: "Sign Up Confirmation"
+    mail to: "impact@social-force.com", subject: "Sign Up Confirmation"
+    #mail to: "max-seibert@web.de", subject: "Sign Up Confirmation"
     
   end
 end

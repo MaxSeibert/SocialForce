@@ -11,9 +11,9 @@
   <body>
   	<div id="topMenueContainer">
     <ul class="topMenue">
-   		<li><%= link_to 'About', about_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
-   		<li><%= link_to 'Team', team_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
-   		<li><%= link_to 'Contact', contact_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
+   		<li><%= link_to 'About', about_path, :style => 'color:white;text-decoration: none;background-color: transparent;padding:15px 40px;' %></li>
+   		<li><%= link_to 'Team', team_path, :style => 'color:white;text-decoration: none;background-color: transparent;padding:15px 40px;' %></li>
+   		<li><%= link_to 'Contact', contact_path, :style => 'color:white;text-decoration: none;background-color: transparent;padding:15px 40px;' %></li>
    		<%if current_user %>
   			<% if current_user.role=="Admin" || current_user.role=="Employee"%>
   				<li>blank</li>
@@ -48,12 +48,12 @@
    	<div class="login">
    			<% if current_user %>
 				<!--when user is logged in-->
- 				<%= link_to "Log Out", logout_path, :style => 'margin-left:100px;color:white;text-decoration: underline;background-color: transparent;padding:15px 10px;' %>
+ 				<%= link_to "Log Out", logout_path, :style => 'margin-left:100px;color:white;text-decoration: none;background-color: transparent;padding:15px 10px;' %>
  				<p style="width:105%;margin-left: 100px;background-color:black; color:white;" style="text-align: center;">Logged in as <%= current_user.to_s %></p>
  			<% else %>
  				<!-- no user is logged in -->
- 				<%= link_to "Sign Up", signup_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %> or
- 				<%= link_to "Log In", login_path, :style => 'color:white;text-decoration: underline;background-color: transparent;padding:15px 0px;' %>
+ 				<%= link_to "Sign Up", signup_path, :style => 'color:white;text-decoration: none;background-color: transparent;padding:15px 0px;' %> or
+ 				<%= link_to "Log In", login_path, :style => 'color:white;text-decoration: none;background-color: transparent;padding:15px 0px;' %>
  			<% end %>
  	</div>
    
@@ -71,23 +71,23 @@
     <nav class="sideMenue">
     	<% if current_user %>
     		<% if current_user.role=="Admin" || current_user.role=="Employee"%>
-    			<li><%= link_to 'Admin', adminarea_path, :style => 'color:black;text-decoration: underline;background-color: transparent;padding:11px 64px;' %></li>
+    			<li><%= link_to 'Admin', adminarea_path, :style => 'color:black;text-decoration: none;background-color: transparent;padding:11px 64px;' %></li>
    				<!--<li><%= link_to 'Sozial_Organisation', new_organisation_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li>--><br><br><br>
    				<!--<li class="space2"><%= link_to "Impact Manager", organisations_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br>--></br>
    			<% end %>
    			<% if current_user.role=="Sozail_Organisation"%>
-  				<li><%= link_to 'Profile', new_organisation_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
+  				<li><%= link_to 'Profile', new_organisation_path , :style => 'color:black;text-decoration: none;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
    				<!--<li class="space2"><%= link_to "Impact Manager", profiles_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br></br>-->
    			<% end %>
    			<% if current_user.role=="Supporter"%>
-  				<li><%= link_to 'Profile', userprofile_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
-   				<li><%= link_to 'Matches', usermatches_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
+  				<li><%= link_to 'Profile', userprofile_path , :style => 'color:black;text-decoration: none;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
+   				<li><%= link_to 'Matches', usermatches_path , :style => 'color:black;text-decoration: none;background-color:transparent;padding:11px 64px;'%></li><br><br><br>
    				<!--<li class="space2"><%= link_to "Impact Manager", profiles_path , :class=>'railslink', :style => 'color:black;padding:10% 23%;'%></li><br><br><br></br>-->
    			<% end %>
    		<% end %>
-   		<li><%= link_to "Volunteers", volunteers_path , :style => 'color:black;background-color:transparent;padding:11px 64px;'%></li><br><br>
-   		<li><%= link_to "Gifting", gifts_path , :style => 'color:black;background-color:transparent;padding:11px 64px;'%></li><br><br>
-   		<li><%= link_to "Programs", programs_path , :style => 'color:black;text-decoration: underline;background-color:transparent;padding:11px 64px;'%></li><br><br>
+   		<li><%= link_to "Volunteers", volunteers_path , :style => 'color:black;text-decoration: none;background-color:transparent;padding:11px 64px;'%></li><br><br>
+   		<li><%= link_to "Gifting", gifts_path , :style => 'color:black;text-decoration: none;background-color:transparent;padding:11px 64px;'%></li><br><br>
+   		<li><%= link_to "Programs", programs_path , :style => 'color:black;text-decoration: none;background-color:transparent;padding:11px 64px;'%></li><br><br>
    	</nav>
    	<br><br><br>
     </div>
@@ -120,8 +120,8 @@
 	
 	<div id="bottomMenueContainer">
 		<ul class="bottomMenue">
-   			<li><%= link_to "Terms of service", tos_path, :class=>'railslink',:style => 'color:black;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
-   			<li><%= link_to "contact us", contact_path, :class=>'railslink',:style => 'color:black;text-decoration: underline;background-color: transparent;padding:15px 40px;' %></li>
+   			<li><%= link_to "Terms of service", tos_path, :class=>'railslink',:style => 'color:black;text-decoration: none;background-color: transparent;padding:15px 40px;' %></li>
+   			<li><%= link_to "contact us", contact_path, :class=>'railslink',:style => 'color:black;text-decoration: none;background-color: transparent;padding:15px 40px;' %></li>
    		</ul>
    	</div>	
   </body>

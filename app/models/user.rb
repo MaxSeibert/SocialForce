@@ -24,7 +24,7 @@ class User < ApplicationRecord
   
   #Role definition
   #ROLES = [ :admin , :employee, :sproject, :support ]
-  ROLES = %w[Admin Employee Sozial_Organisation Supporter].freeze
+  ROLES = %w[Admin Employee Social_Organization Supporter].freeze
   ROLESA = %w[project support].freeze
   
   

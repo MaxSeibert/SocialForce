@@ -5,13 +5,14 @@
 					margin-right: 800px;
 					background-color: rgba(255, 255, 255, 1);
 					width: 200px;
-					border-left: 20px solid yellow;
+					border-left: 20px solid #C3971A;
 					height: 310px;
+					font-size:24px;
 					}
 					
 					
 .sideMenue{	list-style: none;
-			
+			padding-top: 50px;
 			
 			
 			
@@ -24,10 +25,10 @@
 			line-height: 50px;
 			text-align: center;
 			font-family: sans-serif;
-			font-size:120%;
-			}
 			
 			}
+			
+		}
 
 .sideMenue li.space2{
 			margin-left: -10px;

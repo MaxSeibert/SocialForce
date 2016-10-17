@@ -1,7 +1,7 @@
 #topMenueContainer{margin-top: -35px; 
 				margin-left:-40px;
 				margin-right:10px;
-				background-color: #030557;
+				background-color: #002452;
 				height: 50px;
 				width: 105%;
 				min-width: 1500px;
@@ -18,9 +18,9 @@
 			float: left;
 			line-height: 50px;
 			text-align: center;
-			font-family: sans-serif;
+			font-family: Avenir Next, sans-serif;
 			font-size: 25px;
-			color: #030557;
+			color: #002452;
 			position:relative;
 			}
 
